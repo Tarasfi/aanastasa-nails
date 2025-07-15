@@ -18,6 +18,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
     />
+    <!-- Flickity for the carousel -->
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
+    />
+    <!-- JS -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
   </head>
   <body>
     <section class="header">
@@ -27,18 +35,19 @@
           <img src="/static/assets/img/logo.jpg" alt="" />
         </a>
         <!-- Navigation bar -->
+
         <div class="navbar" id="navLinks">
           <i class="fa fa-times" onclick="closeMenu()"></i>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Book Nails</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#book_nav">Book Nails</a></li>
+            <li><a href="#price_nav">Price</a></li>
             <li><a href="">My works</a></li>
-            <li><a href="">About me</a></li>
-            <li><a href="">Links</a></li>
           </ul>
         </div>
         <i class="fa fa-bars" onclick="openMenu()"></i>
       </nav>
+
       <!-- Main page Text & Booking button -->
       <div class="textbox">
         <h1>Nail Master in Drohobych</h1>
@@ -48,7 +57,7 @@
     </section>
 
     <!-- Booking section -->
-    <section class="booking">
+    <section class="booking" id="book_nav">
       <h1>Book Nails</h1>
       <p>By me you can book your nails in any way that you want</p>
       <div class="row">
@@ -78,8 +87,9 @@
         </div>
       </div>
     </section>
+
     <!-- Price List Section -->
-    <section class="price">
+    <section class="price" id="price_nav">
       <h1>Price List</h1>
       <div class="price-container">
         <div class="price-item">
@@ -135,30 +145,46 @@
         </div>
 
         <div class="price-item">
-          <p><strong>Design and its price — please ask in direct.</strong></p>
+          <p><strong>Price can change according to your Design.</strong></p>
         </div>
       </div>
     </section>
-    <!-- Footer -->
-    <section class="footer">
-      <div class="social">
-        <a href=""><i class="fa-brands fa-instagram"></i></a>
-        <a href=""><i class="fa-brands fa-telegram"></i></a>
-        <a href=""><i class="fa-brands fa-facebook"></i></a>
-        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+
+    <!-- Carousel -->
+    <section class="carousel">
+      <h1>My works</h1>
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img src="/static/assets/img/IMG_8911.JPG" id="slide-1" />
+          <img src="/static/assets/img/IMG_7904.JPG" id="slide-2" />
+          <img src="/static/assets/img/IMG_4097.JPG" id="slide-3" />
+        </div>
+        <div class="slider-nav">
+          <a href="#slide-1"></a>
+          <a href="#slide-2"></a>
+          <a href="#slide-3"></a>
+        </div>
       </div>
-      <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Book Nails</a></li>
-        <li><a href="">My works</a></li>
-        <li><a href="">About me</a></li>
-        <li><a href="">Links</a></li>
-      </ul>
-      <p class="copyright">
-        This site developed by Tarasfi | 2025
-      </p>
     </section>
   </body>
+
+  <!-- Footer -->
+  <section class="footer">
+    <div class="social">
+      <a href=""><i class="fa-brands fa-instagram"></i></a>
+      <a href=""><i class="fa-brands fa-telegram"></i></a>
+      <a href=""><i class="fa-brands fa-facebook"></i></a>
+      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+    </div>
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="">Book Nails</a></li>
+      <li><a href="">My works</a></li>
+      <li><a href="">About me</a></li>
+      <li><a href="">Links</a></li>
+    </ul>
+    <p class="copyright">This site developed by Tarasfi | 2025</p>
+  </section>
   <!-- Fontawesome link JS-->
   <script
     src="https://kit.fontawesome.com/100de5471e.js"
