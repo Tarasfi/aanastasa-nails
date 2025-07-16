@@ -1,195 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aanastasa nails</title>
-    <!-- CSS Link -->
-    <link rel="stylesheet" href="/static/assets/css/styles.css" />
-    <!-- Google fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <!-- Font awesome BootstrapCDN link  -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/fontawesome.min.css"
-    />
-    <!-- Flickity for the carousel -->
-    <!-- CSS -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/flickity@2/dist/flickity.min.css"
-    />
-    <!-- JS -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-  </head>
-  <body>
-    <section class="header">
-      <!-- Main Logo -->
-      <nav>
-        <a href="index.html">
-          <img src="/static/assets/img/logo.jpg" alt="" />
-        </a>
-        <!-- Navigation bar -->
-
-        <div class="navbar" id="navLinks">
-          <i class="fa fa-times" onclick="closeMenu()"></i>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#book_nav">Book Nails</a></li>
-            <li><a href="#price_nav">Price</a></li>
-            <li><a href="">My works</a></li>
-          </ul>
-        </div>
-        <i class="fa fa-bars" onclick="openMenu()"></i>
-      </nav>
-
+{% extends "base.html" %}
+{% block content %}
       <!-- Main page Text & Booking button -->
       <div class="textbox">
         <h1>Nail Master in Drohobych</h1>
         <p>Come to our salon and you'll get the best nails in the town</p>
-        <a class="mainbtn" href="">Book nails now</a>
+        <a class="mainbtn" href="#book_nav">Book nails now</a>
       </div>
     </section>
 
     <!-- Booking section -->
-    <section class="booking" id="book_nav">
-      <h1>Book Nails</h1>
-      <p>By me you can book your nails in any way that you want</p>
-      <div class="row">
-        <div class="booking-col">
-          <h3>Using my site</h3>
-          <p>
-            You can simply make a book through the website. Just click on the
-            link in the bottom
-          </p>
-          <button>Book now through website</button>
-        </div>
-        <div class="booking-col">
-          <h3>Using Telegram bot</h3>
-          <p>
-            Just click on the Telegram-bot button and book your nails in a few
-            steps
-          </p>
-          <button>Telegram-bot</button>
-        </div>
-        <div class="booking-col">
-          <h3>By calling me</h3>
-          <p>
-            Just call my number which is +380988761442. You can also copy it
-            using the button
-          </p>
-          <button>Copy the number</button>
-        </div>
-      </div>
-    </section>
+     {% include "book_nails.html" %}
 
     <!-- Price List Section -->
-    <section class="price" id="price_nav">
-      <h1>Price List</h1>
-      <div class="price-container">
-        <div class="price-item">
-          <h3>Coating</h3>
-          <p>(Manicure, nail plate leveling, coating)</p>
-          <span>400 UAH</span>
-        </div>
+     {% include "pricing.html" %}
 
-        <div class="price-item">
-          <h3>Coating with strengthening</h3>
-          <p>
-            (Manicure, nail plate leveling, strengthening with gel/polygel,
-            cuticle reconstruction if needed, coating)
-          </p>
-          <span>450 UAH</span>
-        </div>
+    <!-- Carousel Section-->
+     {% include "carousel.html" %}
 
-        <div class="price-item">
-          <h3>Manicure without coating</h3>
-          <p>(Nail cleaning)</p>
-          <span>250 UAH</span>
-        </div>
+    <!-- Footer Section-->
+     {% include "footer.html" %}
 
-        <div class="price-item">
-          <h3>Old material removal (no coating)</h3>
-          <span>100 UAH</span>
-        </div>
 
-        <div class="price-item">
-          <h3>With further coating</h3>
-          <span>Free</span>
-        </div>
-
-        <div class="price-item">
-          <h3>Extension</h3>
-          <p>(Manicure, extension with tips/gel, shaping, coating)</p>
-          <ul>
-            <li>Up to 3 cm — 550 UAH</li>
-            <li>4–5 cm — 600 UAH</li>
-            <li>6–7 cm — 650 UAH</li>
-          </ul>
-        </div>
-
-        <div class="price-item">
-          <h3>Extension correction</h3>
-          <p>(Depends on length)</p>
-          <span>from 500 UAH</span>
-        </div>
-
-        <div class="price-item">
-          <h3>Single nail extension</h3>
-          <span>30–45 UAH</span>
-        </div>
-
-        <div class="price-item">
-          <p><strong>Price can change according to your Design.</strong></p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Carousel -->
-    <section class="carousel">
-      <h1>My works</h1>
-      <div class="slider-wrapper">
-        <div class="slider">
-          <img src="/static/assets/img/IMG_8911.JPG" id="slide-1" />
-          <img src="/static/assets/img/IMG_7904.JPG" id="slide-2" />
-          <img src="/static/assets/img/IMG_4097.JPG" id="slide-3" />
-        </div>
-        <div class="slider-nav">
-          <a href="#slide-1"></a>
-          <a href="#slide-2"></a>
-          <a href="#slide-3"></a>
-        </div>
-      </div>
-    </section>
-  </body>
-
-  <!-- Footer -->
-  <section class="footer">
-    <div class="social">
-      <a href=""><i class="fa-brands fa-instagram"></i></a>
-      <a href=""><i class="fa-brands fa-telegram"></i></a>
-      <a href=""><i class="fa-brands fa-facebook"></i></a>
-      <a href=""><i class="fa-brands fa-whatsapp"></i></a>
-    </div>
-    <ul>
-      <li><a href="">Home</a></li>
-      <li><a href="">Book Nails</a></li>
-      <li><a href="">My works</a></li>
-      <li><a href="">About me</a></li>
-      <li><a href="">Links</a></li>
-    </ul>
-    <p class="copyright">This site developed by Tarasfi | 2025</p>
-  </section>
-  <!-- Fontawesome link JS-->
-  <script
-    src="https://kit.fontawesome.com/100de5471e.js"
-    crossorigin="anonymous"
-  ></script>
-  <!-- Navbar animation JS file -->
-  <script src="/static/js/script.js"></script>
-</html>
+{% endblock %}

@@ -121,14 +121,15 @@ nav .fa {
     }
     .navbar {
         position: absolute;
-        background-color: pink;
+        box-shadow: -5px 0 5px rgba(0, 0, 0, 0.25);
         height: 100vh ;
         width: 200px;
         top: 0;
-        right: -200px;
+        right: 0;
         text-align: left;
         z-index: 2;
         transition: .4s;
+        backdrop-filter: blur(10px);
     }
 
     nav .fa {
@@ -345,6 +346,12 @@ nav .fa {
 
 /* Carousel styling */
 
+.carousel {
+  padding: 80px 20px;
+  background: linear-gradient(to bottom, #ffeef3, #ffe4ec);
+  text-align: center;
+}
+
 .carousel h1 {
     font-size: 42px;
     color: #3A0519;
@@ -355,6 +362,7 @@ nav .fa {
     position: relative;
     max-width: 48rem;
     margin: 0 auto;
+
 }
 
 .slider {
@@ -362,15 +370,17 @@ nav .fa {
     aspect-ratio: 16/9;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.95);
     border-radius: 0.5rem;
     scroll-behavior: smooth;
+
 }
 
 .slider img {
     flex: 1 0 100%;
     scroll-snap-align: start;
-    object-fit: cover;
+
+    object-fit: scale-down;
 }
 
 .slider-nav {
@@ -388,12 +398,12 @@ nav .fa {
     height: 0.5rem;
     border-radius: 50%;
     background-color: #fff;
-    opacity: 0.75;
+    opacity: 0.5;
     transition: opasity ease 250ms;
 }
 
 .slider-nav a:active {
     opacity: 1;
-    background-color: #ffe4ec;
+
 }
 

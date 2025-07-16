@@ -1,0 +1,43 @@
+[
+  {
+    "title": "Coating",
+    "description": "Manicure, nail plate leveling, coating",
+    "price": "400 UAH"
+  },
+  {
+    "title": "Coating with strengthening",
+    "description": "Manicure, nail plate leveling, strengthening with gel/polygel, cuticle reconstruction if needed, coating",
+    "price": "450 UAH"
+  },
+  {
+    "title": "Manicure without coating",
+    "description": "Nail cleaning",
+    "price": "250 UAH"
+  },
+  {
+    "title": "Old material removal (no coating)",
+    "price": "100 UAH"
+  },
+  {
+    "title": "With further coating",
+    "price": "Free"
+  },
+  {
+    "title": "Extension",
+    "description": "Manicure, extension with tips/gel, shaping, coating",
+    "variants": [
+      { "length": "Up to 3 cm", "price": "550 UAH" },
+      { "length": "4–5 cm", "price": "600 UAH" },
+      { "length": "6–7 cm", "price": "650 UAH" }
+    ]
+  },
+  {
+    "title": "Extension correction",
+    "description": "Depends on length",
+    "price": "from 500 UAH"
+  },
+  {
+    "title": "Single nail extension",
+    "price": "30–45 UAH"
+  }
+]
