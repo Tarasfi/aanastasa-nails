@@ -1,6 +1,6 @@
 import json
 def json_to_db():
-    with open('data/price.json', encoding='utf-8') as p:
+    with open('../data/price.json', encoding='utf-8') as p:
         prices = json.load(p)
 
     for item in prices:

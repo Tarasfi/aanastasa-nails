@@ -281,6 +281,20 @@ nav .fa {
   margin-bottom: 5px;
 }
 
+.choose_option_button {
+    background: #EC7FA9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+    
+}
+
+
+
 /* Footer styling */
 
 .footer {
