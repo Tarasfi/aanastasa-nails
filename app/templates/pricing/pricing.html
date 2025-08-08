@@ -3,26 +3,30 @@
   <h1>Price List</h1>
   <div class="price-container">
     {% for price in prices %}
-
     <div class="price-item">
-      <h3>{{ price.title }}</h3>
-      {% if price.description %}
-      <p>{{ price.description }}</p>
-      {% endif %}
-      <span>{{ price.price }}</span>
-      {% if price.variants %}
-      <ul>
-        {% for variant in price.variants %}
-        <li>{{ variant.length }} - {{ variant.price }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-      <button class="choose_option_button">Choose option</button>
+      <div class="price-text">
+        <h3>{{ price.title }}</h3>
+        {% if price.description %}
+        <p>{{ price.description }}</p>
+        {% endif %}
+        <span>{{ price.price }}</span>
+        {% if price.variants %}
+        <ul>
+          {% for variant in price.variants %}
+          <li>{{ variant.length }} - {{ variant.price }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+      <div class="price-btn">
+        <button class="choose_option_button">Choose option</button>
+      </div>
     </div>
     {% endfor %}
-
     <div class="price-item">
-      <p><strong>Price can change according to your Design.</strong></p>
+      <div class="price-text">
+        <p><strong>Price can change according to your Design.</strong></p>
+      </div>
     </div>
   </div>
 </section>
