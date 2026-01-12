@@ -1,8 +1,10 @@
 from flask_bootstrap import Bootstrap5
 from flask import Flask, render_template, request
 from db import db
+
 from price import Price
 from forms import NewNailsForm
+
 import os 
 from dotenv import load_dotenv
 
