@@ -6,4 +6,5 @@ data/
 test.py
 *.pyc
 .idea/
+
 instance/

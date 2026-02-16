@@ -5,7 +5,7 @@
 <section class="price" id="price_nav">
   <h1>Price List</h1>
   <div class="price-container">
-    <h2>Manicure</h2>
+    <h2>Manicure       <a href="{{ url_for('admin.add_nails')}}" class="choose_option_button">+</a></h2>
     {% for price in prices %}
     {% if price.service_type == "Manicure" %}
     <div class="price-item">
@@ -18,7 +18,8 @@
       <div class="price-btn">
         <span class="time">45 Min.</span>
         <span class="value">{{ price.price }}</span>
-        <a class="choose_option_button">Choose option</a>
+        <a href="{{ url_for('admin.edit', id=price.id) }}" class="choose_option_button">Choose option</a>
+        <a href="{{ url_for('admin.delete', id=price.id) }}" class="choose_option_button">Del</a>
       </div>
     </div>
     {% endif %}
@@ -35,7 +36,8 @@
       </div>
       <div class="price-btn">
         <span class="value">{{ price.price }}</span>
-        <a class="choose_option_button">Choose option</a>
+        <a href="{{ url_for('admin.edit', id=price.id) }}" class="choose_option_button">Choose option</a>
+        <a href="{{ url_for('admin.delete', id=price.id) }}" class="choose_option_button">Del</a>
       </div>
     </div>
     {% endif %}
