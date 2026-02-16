@@ -1,0 +1,75 @@
+/* Booking section */
+
+.booking {
+    width: 100%;
+    padding: 80px 20px;
+    background: linear-gradient(to bottom, #fff3f3, #ffe4ec);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.booking h1 {
+    font-size: 42px;
+    color: #3A0519;
+    margin-bottom: 10px;
+}
+
+.booking p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 50px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.booking-col {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    flex: 1 1 300px;
+    max-width: 330px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+/* Block raising */
+.booking-col:hover {
+    transform: translateY(-10px);
+}
+
+.booking-col h3 {
+    font-size: 22px;
+    color: #3A0519;
+    margin-bottom: 15px;
+}
+
+.booking-col p {
+    font-size: 15px;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.booking-col a {
+    background: #EC7FA9;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-weight: 500;
+}
+
+.booking-col a:hover {
+    background: #d95e8b;
+    transition: background 0.3s ease;
+}

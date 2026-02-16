@@ -26,7 +26,7 @@ def home():
     return render_template("main/index.html")
 
 
-@app.route("/booking_page")
+@app.route("/booking_page", methods=['POST', 'GET'])
 def book_nails():
     result = db.session.execute(db.select(Price))
     prices = result.scalars().all()

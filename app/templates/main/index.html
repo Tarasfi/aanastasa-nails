@@ -1,20 +1,18 @@
 {% extends "base.html" %}
 {% block content %}
       <!-- Main page Text & Booking button -->
-      <div class="textbox">
-        <h1>Nail Master in Drohobych</h1>
-        <p>Come to our salon and you'll get the best nails in the town</p>
-        <a class="mainbtn" href="booking_page">Book nails now</a>
-      </div>
     </section>
 
     <!-- Booking section -->
      {% include "booking/book_ways.html" %}
 
+    <!-- Carousel Section-->
+
+    {% include "gallery/carousel.html" %}
+
     <!-- Price List Section -->
 
-
-    <!-- Carousel Section-->
+    {% include "pricing/pricing.html" %}
 
 
     <!-- Footer Section-->

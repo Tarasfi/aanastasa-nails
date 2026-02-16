@@ -1,0 +1,50 @@
+nav {
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav img {
+    width: 100px;
+
+}
+
+.navbar {
+    flex: 1;
+    text-align: right;
+}
+
+.navbar ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.navbar ul li a {
+    color: #3A0519;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Poppins", sans-serif;
+}
+
+.navbar ul li::after {
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: #BE5985;
+    display: block;
+    margin: auto;
+    transition: 0.4s;
+}
+
+.navbar ul li:hover::after {
+    width: 100%;
+
+}
+
+
+nav .fa {
+  display: none ;
+}

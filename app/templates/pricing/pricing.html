@@ -2,26 +2,40 @@
 <section class="price" id="price_nav">
   <h1>Price List</h1>
   <div class="price-container">
+    <h2>Manicure</h2>
     {% for price in prices %}
+    {% if price.service_type == "Manicure" %}
     <div class="price-item">
       <div class="price-text">
         <h3>{{ price.title }}</h3>
-        {% if price.description %}
+        <!-- {% if price.description %}
         <p>{{ price.description }}</p>
-        {% endif %}
-        <span>{{ price.price }}</span>
-        {% if price.variants %}
-        <ul>
-          {% for variant in price.variants %}
-          <li>{{ variant.length }} - {{ variant.price }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+        {% endif %} -->
       </div>
       <div class="price-btn">
-        <button class="choose_option_button">Choose option</button>
+        <span class="time">45 Min.</span>
+        <span class="value">{{ price.price }}</span>
+        <a href="https://www.w3schools.com/tags/tag_button.asp" class="choose_option_button">Choose option</a>
       </div>
     </div>
+    {% endif %}
+    {% endfor %}
+    <h2>Manicure</h2>
+        {% for price in prices %}
+        {% if price.service_type == "Pedicure" %}
+    <div class="price-item">
+      <div class="price-text">
+        <h3>{{ price.title }}</h3>
+        <!-- {% if price.description %}
+        <p>{{ price.description }}</p>
+        {% endif %} -->
+      </div>
+      <div class="price-btn">
+        <span class="value">{{ price.price }}</span>
+        <a class="choose_option_button">Choose option</a>
+      </div>
+    </div>
+    {% endif %}
     {% endfor %}
     <div class="price-item">
       <div class="price-text">
